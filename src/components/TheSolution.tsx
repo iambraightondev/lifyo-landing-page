@@ -20,7 +20,7 @@ export default function TheSolution() {
         {/* Mockup del Producto (Imagen real) */}
         <div className="flex justify-center mb-16">
           <img
-            src="/images/lifyocard.jpg"
+            src="/images/lifyocard.png"
             alt="Mockup de la Tarjeta Universal Inteligente Lifyo"
             className="w-full max-w-md h-auto rounded-xl shadow-2xl transition-all duration-300 hover:scale-[1.02]"
           />
