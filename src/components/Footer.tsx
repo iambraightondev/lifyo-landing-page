@@ -29,15 +29,6 @@ export default function Footer() {
                 </div>
                 <span>hola@lifyo.co</span>
               </a>
-              <a
-                href="mailto:carreras@lifyo.co"
-                className="flex items-center gap-3 text-slate-400 hover:text-emerald-400 transition-colors group"
-              >
-                <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-emerald-500/10 transition-colors">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <span>carreras@lifyo.co</span>
-              </a>
             </div>
           </div>
 
