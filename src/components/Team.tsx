@@ -4,7 +4,7 @@ export default function Team() {
   const team = [
     {
       name: 'Jhonatan Ramírez',
-      role: 'CEO & Co-Founder',
+      role: 'CEO & Founder',
       image: 'images/jhonatan.jpg',
       linkedin: 'https://www.linkedin.com/in/jhonatan-ramírez-761184121/',
       description:
