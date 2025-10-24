@@ -2,6 +2,7 @@ import Hero from './components/Hero';
 import Problem from './components/Problem';
 import TheSolution from './components/TheSolution';
 import Mission from './components/Mission';
+import Vision from './components/Vision';
 import FounderFit from './components/FounderFit';
 import Team from './components/Team';
 import CallToAction from './components/CallToAction';
@@ -14,6 +15,7 @@ function App() {
       <Problem />
       <TheSolution />
       <Mission />
+      <Vision />
       <FounderFit />
       <Team />
       <CallToAction />

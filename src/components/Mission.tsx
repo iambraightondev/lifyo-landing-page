@@ -2,7 +2,7 @@ import { Target } from 'lucide-react';
 
 export default function Mission() {
   return (
-    <section className="pt-20 pb-40 bg-gray-50">
+    <section className="pt-20 bg-gray-50">
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex items-center justify-center gap-3 mb-12">
           <Target className="w-8 h-8 text-emerald-500" />
