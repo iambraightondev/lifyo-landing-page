@@ -33,7 +33,7 @@ export default function FounderFit() {
             
             <div>
               <p className="text-xl font-semibold text-white">Jhonatan</p>
-              <p className="text-slate-400">CEO & Co-Founder</p>
+              <p className="text-slate-400">CEO & Founder</p>
             </div>
           </div>
         </div>
