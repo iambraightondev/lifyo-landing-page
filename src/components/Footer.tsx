@@ -1,4 +1,4 @@
-import { Mail, Linkedin } from 'lucide-react';
+import { Mail, Linkedin, Facebook } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -32,20 +32,38 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Columna 3: Síguenos */}
+          {/* Columna 3: Síguenos (Actualizada) */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-slate-300">Síguenos</h4>
-            <a
-              href="https://www.linkedin.com/company/lifyo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-slate-400 hover:text-blue-400 transition-colors group"
-            >
-              <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-blue-500/10 transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </div>
-              <span>LinkedIn</span>
-            </a>
+            <div className="flex flex-col space-y-3"> {/* Contenedor para alinear verticalmente */}
+                
+              {/* Enlace de LinkedIn */}
+              <a
+                href="https://www.linkedin.com/company/lifyo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 text-slate-400 hover:text-blue-400 transition-colors group"
+              >
+                <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-blue-500/10 transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </div>
+                <span>LinkedIn</span>
+              </a>
+
+              {/* Enlace de Facebook */}
+              <a
+                href="https://www.facebook.com/share/17WB8kdhBM/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 text-slate-400 hover:text-blue-600 transition-colors group"
+              >
+                <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-blue-600/10 transition-colors">
+                  <Facebook className="w-5 h-5" />
+                </div>
+                <span>Facebook</span>
+              </a>
+
+            </div>
           </div>
         </div>
 

@@ -55,7 +55,7 @@ export default function TheSolution() {
             <Handshake className="w-8 h-8 text-slate-500 mb-4" />
             <h3 className="text-2xl font-semibold text-slate-900 mb-3">Aceptación Universal</h3>
             <p className="text-slate-600 text-justify">
-              A diferencia de las soluciones de crédito específicas, nuestra tarjeta es <strong>universalmente aceptada</strong> (Visa/Mastercard). 
+              A diferencia de las soluciones de crédito específicas, nuestra tarjeta es <strong>universalmente aceptada</strong> (Mastercard). 
               Esto elimina la fricción de adopción y nos permite competir directamente con el crédito bancario tradicional.
             </p>
           </div>
