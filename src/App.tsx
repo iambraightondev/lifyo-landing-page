@@ -1,4 +1,5 @@
 import Hero from './components/Hero';
+import FoundersMessage from "./components/FoundersMessage";
 import Problem from './components/Problem';
 import TheSolution from './components/TheSolution';
 import Mission from './components/Mission';
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="min-h-screen">
       <Hero />
+      <FoundersMessage />
       <Problem />
       <TheSolution />
       <Mission />
