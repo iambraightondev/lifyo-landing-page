@@ -27,7 +27,7 @@ export default function Hero() {
 
         <div className="flex justify-center">
           <a
-            href="#problem"
+            href="#founders-message"
             className="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-emerald-500/50 transition-all duration-500 ease-in-out transform hover:scale-105"
           >
             Conoce Más
