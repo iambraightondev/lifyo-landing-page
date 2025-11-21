@@ -1,4 +1,7 @@
 export default function FoundersMessage() {
+
+  const videoUrl = "https://lifyo-assets-static.s3.us-east-1.amazonaws.com/founders-video.mp4";
+
   return (
     <section id="founders-message" className="w-full bg-white py-20 px-6">
       <div className="max-w-5xl mx-auto text-center">
@@ -21,7 +24,8 @@ export default function FoundersMessage() {
             poster="/images/video-poster.jpg"
             className="w-full h-auto"
           >
-            <source src="/videos/founders-video.mp4" type="video/mp4" />
+            {/* CORRECCIÓN AQUÍ: Usamos la URL de S3 */}
+            <source src={videoUrl} type="video/mp4" />
             Tu navegador no soporta reproducción de video.
           </video>
         </div>
