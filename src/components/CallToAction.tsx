@@ -7,6 +7,7 @@ export default function CallToAction() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [acceptedPolicy, setAcceptedPolicy] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,6 +19,11 @@ export default function CallToAction() {
       return;
     }
 
+    if (!acceptedPolicy) {
+      setError('Debes aceptar la política de tratamiento de datos.');
+      return;
+    }
+
     setLoading(true);
     setError('');
 
@@ -25,6 +31,7 @@ export default function CallToAction() {
       await createLead({ email });
       setSubmitted(true);
       setEmail('');
+      setAcceptedPolicy(false); // 🔹 reset del checkbox
     } catch (err: any) {
       setError(err.message || 'Ocurrió un error al registrar tu email');
     } finally {
@@ -58,16 +65,41 @@ export default function CallToAction() {
                   required
                   className="w-full sm:w-1/2 px-6 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 text-gray-900"
                 />
+
                 <button
                   type="submit"
-                  disabled={loading}
+                  disabled={loading || !acceptedPolicy} // 🔹 UX pro
                   className="px-8 py-3 bg-emerald-500 text-slate-900 font-bold text-base rounded-full shadow-xl transition duration-300 transform hover:scale-105 hover:bg-emerald-400 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? 'Enviando...' : 'Unirse ahora'}
                 </button>
               </form>
-              {/* Mensaje de error debajo del form */}
-              {error && <p className="text-red-400 mt-2 text-center">{error}</p>}
+
+              <div className="flex items-start gap-2 mt-6 text-sm text-slate-200">
+                <input
+                  type="checkbox"
+                  id="policy"
+                  aria-required="true" // 🔹 accesibilidad
+                  checked={acceptedPolicy}
+                  onChange={(e) => setAcceptedPolicy(e.target.checked)}
+                  className="mt-1"
+                />
+                <label htmlFor="policy" className="leading-snug">
+                  Acepto la{' '}
+                  <a
+                    href="/docs/politica-tratamiento-datos.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-400 underline hover:text-emerald-300"
+                  >
+                    Política de Tratamiento de Datos Personales
+                  </a>
+                </label>
+              </div>
+
+              {error && (
+                <p className="text-red-400 mt-2 text-center">{error}</p>
+              )}
             </div>
           ) : (
             <p className="text-lg text-emerald-300 mb-6">
@@ -75,7 +107,7 @@ export default function CallToAction() {
             </p>
           )}
 
-          <p className="text-lg text-slate-200 mb-4">
+          <p className="py-6 text-lg text-slate-200">
             También puedes seguirnos en redes sociales:
           </p>
           <div className="flex justify-center">
